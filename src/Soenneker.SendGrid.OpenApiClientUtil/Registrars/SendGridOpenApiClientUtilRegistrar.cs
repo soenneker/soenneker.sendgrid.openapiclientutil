@@ -6,12 +6,12 @@ using Soenneker.SendGrid.OpenApiClientUtil.Abstract;
 namespace Soenneker.SendGrid.OpenApiClientUtil.Registrars;
 
 /// <summary>
-/// Registers the OpenAPI client utility for dependency injection.
+/// Registers the lazily initialized SendGrid v3 API client.
 /// </summary>
 public static class SendGridOpenApiClientUtilRegistrar
 {
     /// <summary>
-    /// Adds <see cref="SendGridOpenApiClientUtil"/> as a singleton service. <para/>
+    /// Adds the SendGrid API client utility as a singleton service. <para/>
     /// </summary>
     public static IServiceCollection AddSendGridOpenApiClientUtilAsSingleton(this IServiceCollection services)
     {
@@ -22,7 +22,7 @@ public static class SendGridOpenApiClientUtilRegistrar
     }
 
     /// <summary>
-    /// Adds <see cref="SendGridOpenApiClientUtil"/> as a scoped service. <para/>
+    /// Adds the SendGrid API client utility as a scoped service backed by the singleton HTTP client provider. <para/>
     /// </summary>
     public static IServiceCollection AddSendGridOpenApiClientUtilAsScoped(this IServiceCollection services)
     {
