@@ -12,6 +12,7 @@ using Soenneker.Utils.AsyncSingleton;
 
 namespace Soenneker.SendGrid.OpenApiClientUtil;
 
+/// <inheritdoc cref="ISendGridOpenApiClientUtil" />
 public sealed class SendGridOpenApiClientUtil : ISendGridOpenApiClientUtil
 {
     private readonly AsyncSingleton<SendGridOpenApiClient> _client;
