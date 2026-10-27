@@ -44,7 +44,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.SendGrid.HttpClients" Version="11.0.160" />
+        <PackageReference Include="Soenneker.SendGrid.HttpClients" Version="11.0.161" />
         <PackageReference Include="Soenneker.SendGrid.OpenApiClient" Version="11.0.60" />
     </ItemGroup>
 </Project>
